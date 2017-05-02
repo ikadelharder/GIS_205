@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 map.zoomControl.setPosition("topright")
     
 var geolMap = L.esri.dynamicMapLayer({
-url:"https://certmapper.cr.usgs.gov/arcgis/rest/services/geology/northamerica_gmna/MapServer", 
+url:"//certmapper.cr.usgs.gov/arcgis/rest/services/geology/northamerica_gmna/MapServer", 
     opacity: .5
 }).addTo(map);
     
@@ -24,7 +24,7 @@ var overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(map)
     
  var chptLocations = L.esri.featureLayer({
-    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Student_Chpt_Points/FeatureServer/0" 
+    url: "//services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Student_Chpt_Points/FeatureServer/0" 
      }).addTo(map);
     
 chptLocations.bindPopup(function (layer) {
