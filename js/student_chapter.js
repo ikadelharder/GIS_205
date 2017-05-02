@@ -24,7 +24,7 @@ var overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(map)
     
  var chptLocations = L.esri.featureLayer({
-    url: "http://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Student_Chpt_Points/FeatureServer/0", 
+    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Student_Chpt_Points/FeatureServer/0", 
      }).addTo(map);
     
 chptLocations.bindPopup(function (layer) {
