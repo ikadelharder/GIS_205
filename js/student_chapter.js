@@ -25,18 +25,11 @@ L.control.layers(baseMaps, overlayMaps).addTo(map)
     
  var chptLocations = L.esri.featureLayer({
     url: "http://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Student_Chpt_Points/FeatureServer/0", 
-//         pointToLayer: function (geojson, latlng) {
-//             return L.circleMarker(latlng, {
-//                 color: "green",
-//                 radius: 8
-//             });
-//         }
      }).addTo(map);
     
 chptLocations.bindPopup(function (layer) {
     return L.Util.template('<p><b>{College}</b><br>{Location}<br>{Founded}<br><a href="http://aipg.org/studentchapters"> http://aipg.org/studentchapters</a>', layer.feature.properties);
     });
-
 })
 
 function myFunction(){    document.getElementById("myDropdown").classList.toggle("show");
